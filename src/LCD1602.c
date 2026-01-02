@@ -1,4 +1,4 @@
-#include <REGX52.H>
+#include <REGX51.H>
 
 //Òı½ÅÅäÖÃ£º
 sbit LCD_RS=P2^6;

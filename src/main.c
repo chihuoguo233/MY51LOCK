@@ -2,10 +2,10 @@
 #include "LCD1602.H"
 #include "delay.h"
 #include "matrixkey.h"
-unsigned char KeyNum;
-unsigned int Password;
-unsigned int right_Password=2345;
-unsigned int count;
+unsigned char KeyNum;		 //接受MatrixKey()函数的返回值，也就是按键值
+unsigned int Password;		 //记录输入的密码
+unsigned int right_Password=2345;	 //设定的密码
+unsigned int count;					//记录按了几次按键，不能超过四次，超了也没用
 
 
 void main()
@@ -16,13 +16,12 @@ void main()
 	{
 		
 		KeyNum=MatrixKey();
-		if(KeyNum<=10&&KeyNum>0)  //密码区输入
+		if(KeyNum<=10&&KeyNum>0)  //密码区输入，按下按键S1-S10才有用
 			{
 			   	if(count<4)
 				{
 					Password*=10;
 					Password+=KeyNum%10;
-	//		 		if (KeyNum==10){KeyNum;}	 //按下S10按键，输入0，暂时似乎没用
 					LCD_ShowNum(2,1,Password,4);
 					count++;
 				}

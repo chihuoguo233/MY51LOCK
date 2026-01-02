@@ -1,12 +1,7 @@
 #include <REGX51.H>
 #include <DELAY.H>
-#include <LCD1602.H>
-#include <INTRINS.H>
-//unsigned char keynumber = 0;  // 静态变量，只初始化一次！
 
-
-
-unsigned char MatrixKey()
+unsigned char MatrixKey(void)
 {
 	P1=0XF7;
 	if(P1_7==0){Delay(20);while(P1_7==0);Delay(20);return 1;}

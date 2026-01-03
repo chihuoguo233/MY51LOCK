@@ -1,4 +1,4 @@
-void Delay(unsigned char xms)	//@12.000MHz
+void Delay(unsigned char xms)	//@12.000MHz£¬ÑÓÊ±º¯Êý
 {
 	unsigned char data i, j;
 

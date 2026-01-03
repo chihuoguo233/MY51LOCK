@@ -1,7 +1,7 @@
 #include <REGX51.H>
 #include <DELAY.H>
 
-unsigned char MatrixKey(void)
+unsigned char MatrixKey(void)	//°´¼üÉ¨Ãèº¯Êý
 {
 	P1=0XF7;
 	if(P1_7==0){Delay(20);while(P1_7==0);Delay(20);return 1;}
